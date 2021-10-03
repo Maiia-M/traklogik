@@ -1,0 +1,781 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>TrakLogik TrackFire Main</title>
+<meta name="description" content="TrakLogik Company Website. State of the Art Pattern Rrecognition">
+<meta name="keywords" content="pattern recognition, data analysis, data mining, medical data analysis, 
+medical statistics, medical statistical analysis, FPGA, encryption, 
+fpga-based encryption, FPGA ethernet packet manager, FPGA ethernet packet management, 
+target tracking, hyperspectral imaging, multispectral imaging, 
+hyperspectral wine tasting,  hyperspectral wine analyzer, 
+multispectral wine tasting,  multispectral wine analysis,
+fire detection, smoke detection, fire tracking">
+<meta name="author" content="Dr. Marina Murzina, Mikhail Kuznetsov">
+<meta name="generator" content="WYSIWYG Web Builder - http://www.wysiwygwebbuilder.com">
+<link href="TrakLogik_Logo_1a_2.ico" rel="shortcut icon" type="image/x-icon">
+<style type="text/css">
+div#container
+{
+   width: 1000px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 11px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px transparent solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#shape3_master
+{
+   border-width: 0;
+}
+#wb_Text1_master 
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1_master div
+{
+   text-align: left;
+}
+#wb_CssMenu1
+{
+   border: 0px #C0C0C0 solid;
+   -moz-border-radius: 9px;
+   -webkit-border-radius: 9px;
+   border-radius: 9px;
+   background-color: #FFFFFF;
+}
+#wb_CssMenu1 ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_CssMenu1 li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 8px 0px 0px;
+   width: 148px;
+}
+#wb_CssMenu1 a
+{
+   display: block;
+   float: left;
+   color: #FFFFFF;
+   border: 0px #000000 double;
+   background-color: #002840;
+   background: -moz-radial-gradient(circle,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: -webkit-radial-gradient(circle,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: -o-radial-gradient(circle,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: -ms-radial-gradient(circle,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: radial-gradient(circle,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+   width: 138px;
+   height: 24px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 24px;
+   text-align: center;
+   -moz-box-shadow: 4px 4px 2px #A9A9A9;
+   -webkit-box-shadow: 4px 4px 2px #A9A9A9;
+   box-shadow: 4px 4px 2px #A9A9A9;
+}
+#wb_CssMenu1 li:hover a, #wb_CssMenu1 a:hover, #wb_CssMenu1 .active
+{
+   color: #000000;
+   background-color: #FFFF80;
+   background: -moz-radial-gradient(circle,#FFFF80 0%,#FFFF80 18%,#FFA000 34%,#6EC6FF 50%,#0060A0 70%,#0060A0 100%);
+   background: -webkit-radial-gradient(circle,#FFFF80 0%,#FFFF80 18%,#FFA000 34%,#6EC6FF 50%,#0060A0 70%,#0060A0 100%);
+   background: -o-radial-gradient(circle,#FFFF80 0%,#FFFF80 18%,#FFA000 34%,#6EC6FF 50%,#0060A0 70%,#0060A0 100%);
+   background: -ms-radial-gradient(circle,#FFFF80 0%,#FFFF80 18%,#FFA000 34%,#6EC6FF 50%,#0060A0 70%,#0060A0 100%);
+   background: radial-gradient(circle,#FFFF80 0%,#FFFF80 18%,#FFA000 34%,#6EC6FF 50%,#0060A0 70%,#0060A0 100%);
+   border: 0px #000000 double;
+}
+#wb_CssMenu1 li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_CssMenu1 li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_CssMenu1 li:hover, #wb_CssMenu1 li a:hover
+{
+   position: relative;
+}
+#wb_CssMenu1 a.withsubmenu
+{
+   padding: 0 5px 0 5px;
+   width: 138px;
+}
+#wb_CssMenu1 li:hover a.withsubmenu, #wb_CssMenu1 a.withsubmenu:hover
+{
+}
+#wb_CssMenu1 ul ul
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+   visibility: hidden;
+   width: 164px;
+   height: auto;
+   border: none;
+   background-color: #FFFFFF;
+}
+#wb_CssMenu1 ul :hover ul
+{
+   left: 0px;
+   top: 24px;
+   padding-top: 0px;
+   visibility: visible;
+}
+#wb_CssMenu1 .firstmain:hover ul
+{
+   left: 0px;
+}
+#wb_CssMenu1 li li
+{
+   width: 164px;
+   padding: 0 0px 1px 0px;
+   border: 0px #808080 solid;
+   border-width: 0 0px;
+}
+#wb_CssMenu1 li li.firstitem
+{
+   border-top: 0px #808080 solid;
+}
+#wb_CssMenu1 li li.lastitem
+{
+   border-bottom: 0px #808080 solid;
+}
+#wb_CssMenu1 li li.lastitem
+{
+   padding-bottom: 0px;
+}
+#wb_CssMenu1 ul ul a, #wb_CssMenu1 ul :hover ul a
+{
+   float: none;
+   margin: 0;
+   width: 162px;
+   height: auto;
+   white-space: normal;
+   padding: 8px 0px 7px 2px;
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 0px #000000 solid;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   line-height: 13px;
+   text-align: left;
+   text-decoration: none;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+#wb_CssMenu1 ul :hover ul .firstitem a
+{
+   margin-top: 0px;
+}
+#wb_CssMenu1 ul ul :hover a, #wb_CssMenu1 ul ul a:hover, #wb_CssMenu1 ul ul :hover ul :hover a, #wb_CssMenu1 ul ul :hover ul a:hover
+{
+   background-color: #CED5FD;
+   background-image: none;
+   border: 0px #000000 solid;
+   color: #000000;
+}
+#wb_CssMenu1 br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#Image2_master
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image1_master
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text6 div
+{
+   text-align: center;
+}
+#Image1
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image2
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text4 div
+{
+   text-align: justify;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text12 div
+{
+   text-align: justify;
+}
+#Image8
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text2 div
+{
+   text-align: justify;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text5 div
+{
+   text-align: justify;
+}
+#wb_Text7 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text7 div
+{
+   text-align: justify;
+}
+#Image3
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text8 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text8 div
+{
+   text-align: justify;
+}
+#wb_Text9 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text9 div
+{
+   text-align: justify;
+}
+#Image4
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image5
+{
+   border: 0px #000000 solid;
+   padding: 0px 0px 0px 0px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text10 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text10 div
+{
+   text-align: justify;
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text11 div
+{
+   text-align: justify;
+}
+#wb_Text13 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px transparent solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text13 div
+{
+   text-align: center;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px transparent solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text16 div
+{
+   text-align: center;
+}
+#wb_Text14 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px transparent solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text14 div
+{
+   text-align: center;
+}
+#wb_Text17 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text17 div
+{
+   text-align: left;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text18 div
+{
+   text-align: left;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text15 div
+{
+   text-align: justify;
+}
+#MediaPlayer1
+{
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text19 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text19 div
+{
+   text-align: justify;
+}
+#wb_Text20 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text20 div
+{
+   text-align: justify;
+}
+#wb_Text21 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text21 div
+{
+   text-align: justify;
+}
+</style>
+<script src="swfobject.js"></script>
+<link rel="stylesheet" title="Standard" href="imageflow.css" type="text/css" media="screen" />
+<script language="JavaScript" type="text/javascript" src="imageflow.js"></script></head>
+<body>
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:342px;top:332px;width:316px;height:33px;text-align:center;z-index:6;">
+<span style="color:#006BF5;font-family:Tahoma;font-size:27px;"><strong>Fire Images</strong></span></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:1027px;height:186px;z-index:7;">
+<div id="wb_shape3_master" style="position:absolute;left:18px;top:13px;width:211px;height:168px;z-index:0;">
+<a href="./index.html"><img src="images/img0003.png" id="shape3_master" alt="" style="width:211px;height:168px;"></a></div>
+<div id="wb_Text1_master" style="position:absolute;left:231px;top:10px;width:205px;height:19px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;letter-spacing:1.07px;"><strong><u>TrakLogik, LLP</u></strong></span></div>
+<div id="wb_CssMenu1" style="position:absolute;left:247px;top:150px;width:780px;height:36px;z-index:2;">
+<ul>
+<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
+</li>
+<li><a class="withsubmenu" href="./about.html" target="_self" title="About Us">About&nbsp;Us</a>
+
+<ul>
+<li class="firstitem"><a href="./about.html#about_management" target="_self" title="  Management    ">&nbsp;&nbsp;Management&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</li>
+<li class="lastitem"><a href="./about.html#about_partners" target="_self" title="  Partners   ">&nbsp;&nbsp;Partners&nbsp;&nbsp;&nbsp;</a>
+</li>
+</ul>
+</li>
+<li><a class="withsubmenu" href="./solutions.html" target="_self" title="Projects &amp; Solutions">Projects&nbsp;&amp;&nbsp;Solutions</a>
+
+<ul>
+<li class="firstitem"><a href="./solutions.html#solutions_wine" target="_self" title="Wine Spectroscopy">Wine&nbsp;Spectroscopy</a>
+</li>
+<li><a href="./solutions.html#solutions_cats" target="_self" title="Bio-Medical Data Analysis">Bio-Medical&nbsp;Data&nbsp;Analysis</a>
+</li>
+<li><a href="./solutions.html#solutions_fpga" target="_self" title="Ethernet Packet Manager">Ethernet&nbsp;Packet&nbsp;Manager</a>
+</li>
+<li><a href="./solutions.html#solutions_target1_aerial" target="_self" title="Video Target Tracking">Video&nbsp;Target&nbsp;Tracking</a>
+</li>
+<li class="lastitem"><a href="./solutions.html#solutions_plankton" target="_self" title="Plankton Recognition">Plankton&nbsp;Recognition</a>
+</li>
+</ul>
+</li>
+<li><a href="./contact.html" target="_self" title="Contact Us">Contact&nbsp;Us</a>
+</li>
+</ul>
+</div>
+<div id="wb_JavaScript1_master" style="position:absolute;left:779px;top:14px;width:213px;height:34px;z-index:3;">
+<div style="color:#000000;font-size:14px;font-family:Arial;font-weight:normal;font-style:normal;text-align:left;text-decoration:none" id="basicdate"></div>
+<script type="text/javascript">
+   var now = new Date();
+   var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+   var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+   var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+   var year = (now.getYear() < 1000) ? now.getYear() + 1900 : now.getYear();
+   today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
+   var basicdate = document.getElementById('basicdate');
+   basicdate.innerHTML = today;
+</script>
+
+
+</div>
+<div id="wb_Image2_master" style="position:absolute;left:453px;top:95px;width:356px;height:50px;z-index:4;">
+<img src="images/algorithms_and_applications1.gif" id="Image2_master" alt=""></div>
+<div id="wb_Image1_master" style="position:absolute;left:278px;top:59px;width:375px;height:50px;z-index:5;">
+<img src="images/advanced_pattern_recognition1.gif" id="Image1_master" alt=""></div>
+</div>
+<div id="wb_about_management" style="position:absolute;left:372px;top:314px;width:18px;height:18px;z-index:8;">
+<a id="about_management" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Text6" style="position:absolute;left:181px;top:3993px;width:639px;height:14px;text-align:center;z-index:9;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">Copyright &#0169; 2016 by TrakLogik Corporation&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; All Rights Reserved&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <a href="http://www.traklogik.com">http://www.traklogik.com</a></span></div>
+<div id="wb_Image1" style="position:absolute;left:161px;top:382px;width:297px;height:170px;z-index:10;">
+<img src="images/dim_fire_and%20bright%20others.jpg" id="Image1" alt=""></div>
+<div id="wb_Image2" style="position:absolute;left:512px;top:382px;width:297px;height:170px;z-index:11;">
+<img src="images/dim_fire_Color_Transformed%2B%2B%2B.jpg" id="Image2" alt=""></div>
+<div id="wb_Text4" style="position:absolute;left:161px;top:557px;width:324px;height:36px;text-align:justify;z-index:12;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Original Image. Fire looks relatively dim <br>compared to the view of the town.</span></div>
+<div id="wb_Text12" style="position:absolute;left:512px;top:557px;width:322px;height:36px;text-align:justify;z-index:13;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Same image after color transformation. <br>Fire can be seen as bright spots.</span></div>
+<div id="wb_Image8" style="position:absolute;left:131px;top:646px;width:678px;height:381px;z-index:14;">
+<img src="images/TylerAyala-678x381_night%20wLights.jpg" id="Image8" alt=""></div>
+<div id="wb_Text2" style="position:absolute;left:91px;top:382px;width:28px;height:24px;text-align:justify;z-index:15;">
+<span style="color:#000000;font-family:Arial;font-size:21px;"><strong>1.</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:91px;top:646px;width:28px;height:24px;text-align:justify;z-index:16;">
+<span style="color:#000000;font-family:Arial;font-size:21px;"><strong>2.</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:161px;top:1032px;width:608px;height:18px;text-align:justify;z-index:17;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Original Image. Fire and bright lights of the city.</span></div>
+<div id="wb_Image3" style="position:absolute;left:131px;top:1076px;width:678px;height:381px;z-index:18;">
+<img src="images/Tyler_Color_Transformed%2B%2B%2B.jpg" id="Image3" alt=""></div>
+<div id="wb_Text8" style="position:absolute;left:161px;top:1465px;width:608px;height:18px;text-align:justify;z-index:19;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">After color transformations, fire is the most distinguishable object.</span></div>
+<div id="wb_Text9" style="position:absolute;left:91px;top:1537px;width:28px;height:24px;text-align:justify;z-index:20;">
+<span style="color:#000000;font-family:Arial;font-size:21px;"><strong>3.</strong></span></div>
+<div id="wb_Image4" style="position:absolute;left:147px;top:1537px;width:522px;height:348px;z-index:21;">
+<img src="images/yellow_grass_day_17201219_BG3_25percent.gif" id="Image4" alt=""></div>
+<div id="wb_Image5" style="position:absolute;left:147px;top:1941px;width:522px;height:348px;z-index:22;">
+<img src="images/yellow_grass_Color_Transformed%2B%2B%2B.gif" id="Image5" alt=""></div>
+<div id="wb_Text10" style="position:absolute;left:161px;top:1891px;width:364px;height:18px;text-align:justify;z-index:23;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Original Image. Fire and bright yellow grass.</span></div>
+<div id="wb_Text11" style="position:absolute;left:161px;top:2293px;width:485px;height:18px;text-align:justify;z-index:24;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">After color transformations, fire is distinguished from the grass.</span></div>
+<div id="wb_Text13" style="position:absolute;left:342px;top:2547px;width:316px;height:33px;text-align:center;z-index:25;">
+<span style="color:#006BF5;font-family:Tahoma;font-size:27px;"><strong>Fire Video Clips</strong></span></div>
+<div id="wb_Text16" style="position:absolute;left:342px;top:2382px;width:316px;height:33px;text-align:center;z-index:26;">
+<span style="color:#006BF5;font-family:Tahoma;font-size:27px;"><strong>Smoke Images</strong></span></div>
+<div id="wb_Text14" style="position:absolute;left:342px;top:2727px;width:316px;height:33px;text-align:center;z-index:27;">
+<span style="color:#006BF5;font-family:Tahoma;font-size:27px;"><strong>Smoke Video Clips</strong></span></div>
+<div id="wb_Text17" style="position:absolute;left:163px;top:2775px;width:644px;height:54px;z-index:28;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><a href="Smoke_Manavgat_Raw++++.avi" title="Foreset Fire: Smoke">Smoke_Manavgat_Raw.avi</a>&nbsp;&nbsp; (&quot;save target as&quot;):&nbsp;&nbsp; <br>video&nbsp; shows forest fire: how smoke starts at ~30-th second and progresses. <br>Taken from http://signal.ee.bilkent.edu.tr/VisiFire/.</span></div>
+<div id="wb_Text18" style="position:absolute;left:321px;top:2845px;width:348px;height:18px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:16px;">Or watch the beginning of this clip:</span></div>
+<div id="wb_FlashVideoPlayer1" style="position:absolute;left:242px;top:2874px;width:447px;height:356px;z-index:30;">
+<div id="FlashVideoPlayer1">
+<img src="images/Smoke_Manavgat_Raw%2B%2B%2B%2BFRAME2%2B%2B352_288.jpg" style="width:100%;height:100%;" alt="">
+</div>
+<script type="text/javascript">
+   var flashvars = {};
+   var params = {};
+   flashvars.videoPath = "Smoke_Manavgat_Raw%2B%2B%2B%2Bhalf---.flv";
+   flashvars.imagePath = "images/Smoke_Manavgat_Raw%2B%2B%2B%2BFRAME2%2B%2B352_288.jpg";
+   flashvars.title = "";
+   flashvars.description = "";
+   flashvars.viewInfoButton = "true";
+   flashvars.viewFullscreenButton = "true";
+   flashvars.viewScaleButton = "true";
+   flashvars.viewVolumeControls = "true";
+   flashvars.viewTime = "true";
+   flashvars.viewBigPlayButton = "true";
+   flashvars.videoLoop = "false";
+   flashvars.videoAutoPlay = "false";
+   flashvars.videoBufferTime = "1";
+   flashvars.tlInterval = "1000";
+   flashvars.soundVolume = "0.80";
+   flashvars.fullSizeView = "2";
+   flashvars.spacing = "10";
+   flashvars.controlHeight = "25";
+   flashvars.volumeLengthW = "100";
+   flashvars.color1 = "0xAAAAAA";
+   flashvars.color2 = "0x000000";
+   flashvars.borderColor = "0x000000";
+   flashvars.borderAlpha = "0.5";
+   flashvars.timeColor1 = "0x000000";
+   flashvars.timeColor2 = "0x000000";
+   flashvars.timeAlpha1 = "1.0";
+   flashvars.timeAlpha2 = "1.0";
+   flashvars.timeTextColor1 = "0xFFFFFF";
+   flashvars.timeTextColor2 = "0xC0C0C0";
+   flashvars.scrubberHeight = "3";
+   flashvars.scrubberColor1 = "0xC0C0C0";
+   flashvars.scrubberAlpha1 = "1.0";
+   flashvars.scrubberColor2 = "0x0099FF";
+   flashvars.scrubberAlpha2 = "1.0";
+   flashvars.filterColor = "0x0099FF";
+   flashvars.filterAlpha = "0.6";
+   flashvars.buttonColor = "0xFFFFFF";
+   flashvars.titleColor = "0x47D2FF";
+   flashvars.descriptionColor = "0xFFFFFF";
+   flashvars.infoBackgroundColor = "0xAAAAAA";
+   flashvars.infoBackgroundAlpha = "0.50";
+   params.quality = "Best";
+   params.scale = "noscale";
+   params.wmode = "opaque";
+   params.play = "false";
+   params.loop = "false";
+   params.menu = "false";
+   params.allowfullscreen = "true";
+   params.salign = "tl";
+   swfobject.embedSWF("wb.videoplayer.swf", "FlashVideoPlayer1", "100%", "100%", "9.0.0", false, flashvars, params);
+</script>
+</div>
+<div id="wb_Text15" style="position:absolute;left:809px;top:314px;width:25px;height:18px;text-align:justify;z-index:31;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><u><a href="./fire/live_stream_file.html">...</a></u></span></div>
+<div id="wb_MediaPlayer1" style="position:absolute;left:512px;top:3331px;width:442px;height:298px;z-index:32;">
+<video src="Smoke_Manavgat_Raw%2B%2B%2B%2B.mp4" id="MediaPlayer1" autoplay="autoplay" controls="controls" preload="auto">
+</video>
+</div>
+<div style="background-color:#000000;position:absolute;left:79px;top:3640px;width:406px;height:272px;z-index:33">
+<div id="imageflow" style="left:0px;top:0px;width:406px;height:272px">
+   <div id="loading">
+      <b>Loading images</b><br/>
+      <img src="loading.gif" width="208" height="13" alt="loading" />
+   </div>
+   <div id="images">
+      
+<img src="images/Smoke_Manavgat_Raw++++FRAME2++352_288.jpg" longdesc="images/Smoke_Manavgat_Raw++++FRAME2++352_288.jpg" alt="Smoke_Manavgat_Raw++++FRAME2++352_288.jpg" />
+<img src="images/Smoke_Manavgat_Raw++++FRAME.GIF" longdesc="images/Smoke_Manavgat_Raw++++FRAME.GIF" alt="Smoke_Manavgat_Raw++++FRAME.GIF" />
+<img src="images/Tyler_Color_Transformed+++.jpg" longdesc="images/Tyler_Color_Transformed+++.jpg" alt="Tyler_Color_Transformed+++.jpg" />
+<img src="images/yellow_grass_Color_Transformed+++.gif" longdesc="images/yellow_grass_Color_Transformed+++.gif" alt="yellow_grass_Color_Transformed+++.gif" />
+<img src="images/yellow_grass_day_17201219_BG3_25percent.gif" longdesc="images/yellow_grass_day_17201219_BG3_25percent.gif" alt="yellow_grass_day_17201219_BG3_25percent.gif" />
+<img src="images/dim_fire_Color_Transformed+++.jpg" longdesc="images/dim_fire_Color_Transformed+++.jpg" alt="dim_fire_Color_Transformed+++.jpg" />
+<img src="images/TylerAyala-678x381_night wLights.jpg" longdesc="images/TylerAyala-678x381_night wLights.jpg" alt="TylerAyala-678x381_night wLights.jpg" />
+<img src="images/dim_fire_and bright others.jpg" longdesc="images/dim_fire_and bright others.jpg" alt="dim_fire_and bright others.jpg" />
+<img src="images/contact_CA_phone.png" longdesc="images/contact_CA_phone.png" alt="contact_CA_phone.png" />
+<img src="images/contact_emails.png" longdesc="images/contact_emails.png" alt="contact_emails.png" />
+<img src="images/MarinaMurzina_TrakLogik.JPG" longdesc="images/MarinaMurzina_TrakLogik.JPG" alt="MarinaMurzina_TrakLogik.JPG" />
+<img src="images/rybaCareers_left.BMP" longdesc="images/rybaCareers_left.BMP" alt="rybaCareers_left.BMP" />
+
+   </div>
+   <div id="captions"></div>
+   <div id="scrollbar">
+      <div id="slider"></div>
+   </div>
+</div>
+</div>
+<div id="wb_Text19" style="position:absolute;left:860px;top:314px;width:25px;height:18px;text-align:justify;z-index:34;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><u><a href="./fire/change_pic.html">...</a></u></span></div>
+<div id="wb_Text20" style="position:absolute;left:807px;top:347px;width:25px;height:18px;text-align:justify;z-index:35;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><u><a href="./fire/livestream_text_placeholder.html">...</a></u></span></div>
+<div id="wb_Text21" style="position:absolute;left:850px;top:347px;width:25px;height:18px;text-align:justify;z-index:36;">
+<span style="color:#000000;font-family:Arial;font-size:16px;"><u><a href="./fire/show.html">...</a></u></span></div>
+</div>
+</body>
+</html>
